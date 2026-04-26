@@ -75,25 +75,32 @@ The macro emits diagnostics when:
 
 ## Adding `SLMacros` To An Xcode Project
 
-### Option 1: Add as a local package
+You can install `SLMacros` in Xcode either from GitHub or by downloading the repository and adding it as a local package.
 
-If the package is already on your machine:
-
-1. Open your app project in Xcode.
-2. Choose `File > Add Package Dependencies...`
-3. Click `Add Local...`
-4. Select the `SLMacros` folder.
-5. Add the `SLMacros` library product to the target that will use the macros.
-
-### Option 2: Add from a package URL
-
-If you host this package in Git:
+### Option 1: Install from GitHub
 
 1. Open your app project in Xcode.
 2. Choose `File > Add Package Dependencies...`
-3. Paste the package repository URL.
-4. Select the version or branch you want.
-5. Add the `SLMacros` library product to your app target.
+3. Enter the package URL:
+
+```text
+https://github.com/StewartLynch/SLMacros
+```
+
+4. Choose the dependency rule you want, such as the latest version or a branch.
+5. Click `Add Package`.
+6. Add the `SLMacros` library product to the target that will use the macros.
+
+### Option 2: Download and add as a local package
+
+1. Download or clone the repository from [github.com/StewartLynch/SLMacros](https://github.com/StewartLynch/SLMacros).
+2. Open your app project in Xcode.
+3. Choose `File > Add Package Dependencies...`
+4. Click `Add Local...`
+5. Select the downloaded `SLMacros` folder.
+6. Add the `SLMacros` library product to the target that will use the macros.
+
+Once the package has been added, Xcode will make the macros available to any target linked against the `SLMacros` product.
 
 ## Importing And Using The Macros
 
